@@ -7,15 +7,14 @@ function TDWrite() {
     title:'',
     txt:'',
   })
-
   const set = {...value, title:'', txt:''}
   const [submitTodo] = useSubmit({value, setValue, set});
 
 
   return (
     <form onSubmit={submitTodo}>
-      <input type="text" name="title" value={value.title} onChange={handler}/>
-      <input type="text" name="txt" value={value.txt} onChange={handler}/>
+      <input required type="text" name="title" value={value.title} onChange={handler}/>
+      <input required type="text" name="txt" value={value.txt} onChange={handler}/>
       <input type="submit"/>
     </form>
   )

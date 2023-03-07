@@ -1,8 +1,10 @@
 import React from 'react'
 import { useConfigTodo } from '../../hooks/useConfigTodo'
+import { doneTodo, deleteTodo } from '../../modules/todolists';
+import TDEdite from './TDEdite';
 
 function TDState({isDone}) {
-  const [todo] = useConfigTodo();
+  const [todo,dispatch] = useConfigTodo();
 
   return (
     <>
@@ -11,7 +13,9 @@ function TDState({isDone}) {
         el.isDone === isDone && (
           <div key={el.id}>
             <p>{el.title}</p>
-            <p>{el.txt}</p>
+            <TDEdite item={el} />
+            <button onClick={()=>{dispatch(doneTodo(el.id))}}>완료</button>
+            <button onClick={()=>{dispatch(deleteTodo(el.id))}}>삭제</button>
           </div>
         ))}
 
@@ -19,4 +23,4 @@ function TDState({isDone}) {
   )
 }
 
-export default TDState
+export default TDState;
