@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { useInput } from '../../hooks/useInput';
 import { useEitsubmit } from '../../hooks/useSubmit';
 
@@ -9,12 +10,13 @@ function TDEdite({item}) {
   });
   const set = {...value, title:''}
   const [editsubmitTodo] = useEitsubmit({item, value, setValue, setEdit, set});
+  const navigate = useNavigate();
 
   return (
     <>
     {!edit ? (
       <>
-      <p>{item.txt}</p>
+      <p style={{cursor:"pointer"}} onClick={()=> {navigate(`/todos/${item.id}`)}}>{item.txt}</p>
       <button onClick={()=> setEdit(pre=> !pre)} >수정하기</button>
       </>)
       : (
