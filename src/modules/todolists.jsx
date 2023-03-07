@@ -39,10 +39,10 @@ export const editTodo = (payload) => {
 
 // initial Value
 const initial = [
-  {id:123456, title:"리액트만들기(1)", txt:"리액트 만들기란", isDone:false},
-  {id:123457, title:"리액트만들기(2)", txt:"리액트 만들기란", isDone:false},
-  {id:123458, title:"리액트만들기(3)", txt:"리액트 만들기란", isDone:true},
-  {id:123459, title:"리액트만들기(4)", txt:"리액트 만들기란", isDone:true},
+  {id:1678187346676, title:"리액트만들기(1)", txt:"리액트 만들기란", isDone:false},
+  {id:1678187346677, title:"리액트만들기(2)", txt:"리액트 만들기란", isDone:false},
+  {id:1678187346678, title:"리액트만들기(3)", txt:"리액트 만들기란", isDone:true},
+  {id:1678187346679, title:"리액트만들기(4)", txt:"리액트 만들기란", isDone:true},
 ];
 
 // Reducer 함수

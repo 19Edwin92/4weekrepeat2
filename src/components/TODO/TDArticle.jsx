@@ -1,12 +1,13 @@
 import React from 'react'
+import { TDArticle_Layout } from './TDCss'
 import TDState from './TDState'
 
 function TDArticle() {
   return (
-    <>
-    <TDState isDone={false}/>
-    <TDState isDone/>
-    </>
+    <TDArticle_Layout>
+      <TDState isDone={false} />
+      <TDState isDone />
+    </TDArticle_Layout>
   )
 }
 
