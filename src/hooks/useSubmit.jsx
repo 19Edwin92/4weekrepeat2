@@ -1,6 +1,7 @@
 import { pluseTodo, editTodo } from "../modules/todolists";
 import { useConfigTodo } from "./useConfigTodo";
 
+//TDWrite.jsx
 export const useSubmit = ({value, setValue, set}) => {
   const [todo, dispatch] = useConfigTodo();
   const submitTodo = (e) => {
@@ -11,6 +12,7 @@ export const useSubmit = ({value, setValue, set}) => {
   return [submitTodo]
 }
 
+//TDEdit.jsx
 export const useEitsubmit = ({item, value, setValue, setEdit, set}) => {
   const [todo, dispatch] = useConfigTodo();
   const editsubmitTodo = (e) => {

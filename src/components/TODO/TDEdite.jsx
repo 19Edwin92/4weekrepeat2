@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
-import { useConfigTodo } from '../../hooks/useConfigTodo';
 import { useInput } from '../../hooks/useInput';
 import { useEitsubmit } from '../../hooks/useSubmit';
-import { editTodo } from '../../modules/todolists';
 
 function TDEdite({item}) {
   const [edit, setEdit] = useState(false);
-  const [todo, dispatch] = useConfigTodo();
   const [value, setValue, handler] = useInput({
     title:''
   });

@@ -37,7 +37,7 @@ export const editTodo = (payload) => {
   }
 }
 
-
+// initial Value
 const initial = [
   {id:123456, title:"리액트만들기(1)", txt:"리액트 만들기란", isDone:false},
   {id:123457, title:"리액트만들기(2)", txt:"리액트 만들기란", isDone:false},
@@ -45,6 +45,7 @@ const initial = [
   {id:123459, title:"리액트만들기(4)", txt:"리액트 만들기란", isDone:true},
 ];
 
+// Reducer 함수
 const todo = ((state=initial, action) => {
   switch (action.type) {
     case PLUSE:
@@ -66,7 +67,6 @@ const todo = ((state=initial, action) => {
       const findtodo = state.findIndex(el => el.id === Number(action.payload.id))
       const newtodo = [...state]
       newtodo.splice(findtodo,1,action.payload)
-      console.log(newtodo)
       return [...newtodo]
     default:
       return state;
