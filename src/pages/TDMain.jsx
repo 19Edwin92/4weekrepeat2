@@ -2,7 +2,11 @@ import React from 'react'
 
 function TDMain() {
   return (
-    <div>TDMain</div>
+    <>
+    <header>헤더</header>
+    <div>write</div>
+    <article>내용입력</article>
+    </>
   )
 }
 
