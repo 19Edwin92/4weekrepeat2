@@ -1,11 +1,15 @@
 import React from 'react'
+import TDArticle from '../components/TODO/TDArticle'
+import { CreateGolbal } from '../components/TODO/TDCss'
+import TDWrite from '../components/TODO/TDWrite'
 
 function TDMain() {
   return (
     <>
+    <CreateGolbal />
     <header>헤더</header>
-    <div>write</div>
-    <article>내용입력</article>
+    <TDWrite />
+    <TDArticle />
     </>
   )
 }
